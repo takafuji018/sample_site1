@@ -1,0 +1,587 @@
+body{
+    background: #d2d2d2;
+    color: #666;
+}
+
+.container{
+    width: 95%;
+    background-color: white;
+    margin: 0 auto;
+}
+
+
+/*---------------header-image*/
+.h-title{
+    height: 100px;
+    border-top: 5px solid blue;
+    position: relative;
+}
+.h-title .h-logo{
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%)
+}
+
+
+
+/*--------------nav*/
+.h-nav{
+    border-top: 1px solid #d2d2d2;
+}
+
+.h-nav-nav{
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+
+.h-menu{
+    letter-spacing: -.4em;
+}
+
+.h-list{
+    display: inline-block;  /*横並びにする*/
+    width: calc(100%/6);   /*6等分している・この時点ではカラム落ち*/
+    position: relative;  
+    letter-spacing: normal;
+    height: 64px;
+    border-right: 1px solid #d2d2d2;
+    box-sizing: border-box;
+    vertical-align: bottom;  /*画像とナビバーの隙間をなくす*/
+}
+
+
+.h-list:hover .h-l-top{
+    color: #0e36ca;
+}
+
+.h-list:hover{
+    background-color: #e6ebfa;
+}
+
+.h-list:hover .h-l-box:before{  /*カーソルを当てても画像が動かないように設定*/
+    content: "";
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    background-color: #0e36ca;
+    left: 4px
+}
+
+.h-l-box{
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+}
+
+.h-l-top{
+    font-size: 15px;
+    color: #666666;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.h-l-bottom{
+    font-size: 10px;
+    color: #bababa;
+    text-align: center;
+}
+
+.active{
+    background-color: #e6ebfa;
+
+}
+
+.active .h-l-box:before{  /*カーソルを当てても画像が動かないように設定*/
+    content: "";
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    background-color: #0e36ca;
+    left: 4px
+}
+
+.active .h-l-top{
+    color: #0e36ca;
+}
+
+.h-image{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.contents{
+    padding: 24px;
+}
+
+.main{
+    float: left;
+    width: 70%;
+}
+
+.m-h2{
+    background-color: #0f3bda;
+    color: #ffffff;
+    padding: 14px 12px 14px 24px;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.m-h2::first-letter{       /*ｈ２の横の線の指定*/
+    border-left: 3px solid #8e9eef;
+    padding-left: 16px;
+}
+
+.m-h3{
+    background-color: #f6f6f6;
+    color: #666666;
+    padding: 14px 12px 14px 24px;
+    border-radius: 4px;
+    font-size: 17px;
+    border: #ccc 1px solid;
+}
+
+.m-section{
+    color: #666666;
+    margin-bottom: 24px;
+}
+
+
+
+/*floatで左にずらす*/
+.m-info-date{
+    float: left;
+    padding: 8px 32px 8px 8px;
+    color: blue;
+}
+
+.m-info-content{
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.m-info-new{
+    background: red;
+    font-size: 11px;
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+
+
+/*過去ログを右にずらす*/
+.m-log{
+    text-align: right;
+    padding-top: 24px;
+}
+
+
+.m-log a{
+    color: #666666;
+}
+
+
+/*下のセクション*/
+
+.m-section{
+  padding: 10px 0px 10px 0px;
+}
+
+.m-p{
+    font-size: 15px;
+    color: #666666;
+    margin: 10px 16px;
+    line-height: 2;
+}
+
+.m-p-p{
+    padding: 0px 0px 24px 16px;
+}
+
+.m-point{
+    color: red;
+}
+
+.m-point-bold{
+    color: red;
+    font-weight: bold;
+}
+
+.m-point-gl{
+    background-color: #cccccc;
+    color: #333333;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+/*テーブルの作り方*/
+
+table{
+    width: 100%
+}
+
+.m-th, .m-td{
+    border: 1px solid #ccc;
+    padding: 18px;
+}
+
+.m-th-col{
+    border: 1px solid #ccc;
+    padding: 18px;
+    text-align: left;
+
+}
+
+.m-th{
+    width: 20%;
+    text-align: center;
+
+    /*表の真ん中に持ってくる*/
+    vertical-align: middle;
+}
+
+.m-td{
+    text-align: left;
+    width: 100%;
+}
+
+.m-td a{
+    color: #666666;
+}
+
+.m-th a:hover{
+    color: blue;
+    text-decoration: none;
+}
+
+.m-card{
+    padding-bottom: 20px;
+}
+
+/*サービスリンクの画像*/
+.se-img{
+    max-width: 100%;
+}
+
+.mm-back{
+    padding: 5px 15px;
+}
+
+/*サービスページカードのlinkカード作り方*/
+.card{
+    border: 1px solid #ccc;
+    padding: 20px;
+    overflow: hidden;
+    line-height: 2;
+    position: relative;
+    box-shadow: 0px 5px 10px #ccc;
+    background: linear-gradient(#fff,#ddd);
+}
+
+.m-no-card{
+    border: 1px solid #ccc;
+    padding: 20px;
+    overflow: hidden;
+    line-height: 2;
+    position: relative;
+    box-shadow: 0px 5px 10px #ccc;
+    background: linear-gradient(#fff,#ddd);
+}
+
+/*動きを付ける*/
+.card:hover{
+    box-shadow: 0px 5px 10px #ccc;
+    transform: translateY(-5px);
+    transition: .3s;
+}
+
+.card img{
+    width: 30%;
+    float: left;
+    margin-right: 10px;
+}
+
+a{
+    color: #666;
+}
+
+a:hover{
+    color: blue;
+    text-decoration: none;
+}
+
+.a-a{
+    color: #666;
+    text-decoration: none;
+}
+
+.card h4{
+    color: blue;
+}
+
+.m-no-card h4{
+    color: blue;
+}
+
+.card-p:hover{
+    color: blue;
+}
+
+
+/*コンテントの疑似要素矢印*/
+.card::before{
+    content: "→";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    background: #666;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+
+
+/*お問い合わせの作り方*/
+input{
+    width: 60%;
+}
+
+textarea{
+    width: 90%;
+}
+
+.m-table{
+    margin-bottom: 24px;
+}
+
+.button{
+    width: 20%;
+}
+
+/*確認ボタンをセンターに*/
+form{
+    text-align: center;
+}
+
+
+
+
+/*side*/
+.side{
+    float: right;
+    width: 25%;
+}
+
+.s-framebox{
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    margin-bottom: 24px;
+    color: #666666;
+}
+
+.s-box{
+    margin-bottom: 24px;
+    color: #666666;
+
+}
+
+.s-h4{
+    padding: 28px 10px;
+    border-top: 5px solid blue;
+    background: #eeeeee;
+    border-bottom: 1px solid #d2d2d2;
+    color: #666;
+    font-weight: bold;
+}
+
+.s-list{
+    border-bottom: 1px solid #d2d2d2;
+    padding: 10px;
+    overflow: hidden;  /*画像の高さを認識できる*/
+}
+
+.s-list:hover{
+    background-color: white;
+}
+
+.s-list a{
+    text-decoration: none;
+    color: #666666;
+}
+
+.s-list:hover a{
+    color: blue;
+
+}
+
+.s-img{
+    float: left;
+    width: 20%;
+    margin-right: 5px;
+}
+
+.s-l-title{
+    color: blue;
+    font-size: 11px;
+}
+
+.s-l-description{
+    font-size: 11px;
+}
+
+.s-company-title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0; 
+}
+
+.s-company-info{
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+
+/*--------------------フッター----------------*/
+.footer {
+    text-align: center;
+    font-size: 13px;
+    clear: both;
+    background-color: blue;
+    color: #ffffff;
+    padding: 16px 0;
+    line-height: 2;
+}
+
+.footer-under{
+    font-size: 12px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer a:hover{
+    color: blue;
+}
+
+
+
+/* 🍔 */
+/* 🍔三本線を書く　spanタグ疑似要素を使う */
+#nav-open span ,#nav-open span:before, #nav-open span:after{
+    position: absolute;
+    /* 線の太さ、長さ */
+    height: 5px;  
+    width: 30px;
+    background: #666;
+    content: "";
+    /* カーソル当てた時に指マークになる */
+    cursor: pointer;
+}
+
+#nav-open span{
+    top: 38px;
+    right: 30px;
+}
+
+#nav-open span:before{
+    bottom: -12px;
+}
+
+#nav-open span:after{
+    bottom: -24px;
+}
+
+.nav-invisible{
+    display: none;
+}
+
+#nav-contents{
+    position: absolute;
+    top: 100px;
+    /* 要素が重なったときに全面に出る */
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    background: black;
+    /* ゆっくりと表示する */
+    transition: .3s;
+    /* 通常は非表示にできる */
+    opacity: 0;
+}
+
+#nav-input:checked ~ #nav-contents{
+    /* 上の0に対して.8向こう側が透けるで出すことができる */
+    opacity: .8;
+}
+
+.sp-menu-list{
+    border-bottom: 1px solid white;
+    text-align: left;
+    line-height: 2.0;
+    padding: 16px;
+    }
+
+.sp-menu-list a{
+    color: white;
+    text-decoration: none;
+}
+
+.sp-menu-top{
+    font-size: 18px;
+}
+.sp-bottom{
+    font-size: 11px;
+}
+
+@media screen and (min-width: 780px){
+    .sp-menu {
+        display: none;
+    }
+}
+
+/* 🍔 */
+
+
+
+@media screen and (max-width: 780px){
+    body{
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .h-nav, .h-nav-nav{
+        display: none;
+    }
+    
+    .main{
+        float: none;
+        width: auto;
+    }
+
+    .side{
+        float: none;
+        width: auto;
+    }
+}
+
+
